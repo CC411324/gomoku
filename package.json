@@ -13,6 +13,7 @@
     "build:shared": "npm run build --workspace=packages/shared",
     "build:client": "npm run build --workspace=packages/client",
     "build:server": "npm run build --workspace=packages/server",
+    "prestart": "npm run build:shared && npm run build:client && npm run build:server",
     "start": "NODE_ENV=production node packages/server/dist/index.js",
     "start:win": "set NODE_ENV=production&& node packages/server/dist/index.js"
   },

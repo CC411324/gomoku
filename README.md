@@ -43,35 +43,35 @@ gomoku/
 └── README.md
 ```
 
-## 云端部署（Replit）
+## 云端部署（Glitch）
 
-项目已配置 [.replit](.replit)，支持一键部署到 Replit 免费平台（无需绑定信用卡）。
+项目已配置 [glitch.json](glitch.json)，支持一键部署到 Glitch 免费平台（无需绑定信用卡，可用 GitHub 账号直接登录）。
 
 ### 部署步骤
 
-1. **访问 Replit 并导入仓库**
+1. **访问 Glitch 并导入仓库**
 
-   - 打开 [https://replit.com](https://replit.com) 并注册/登录
-   - 点击 **Create Repl** → **Import from GitHub**
+   - 打开 [https://glitch.com](https://glitch.com)
+   - 点击右上角 **Sign in** → 选择 **Sign in with GitHub**（无需单独注册）
+   - 登录后点击 **New Project** → **Import from GitHub**
    - 粘贴仓库地址：`https://github.com/CC411324/gomoku`
-   - 点击 **Import from GitHub**
+   - 点击 **Import**
 
-2. **首次运行**
+2. **等待自动构建**
 
-   - Replit 会自动读取 `.replit` 配置
-   - 点击 **Run** 按钮，自动执行：安装依赖 → 构建 → 启动服务
-   - 首次构建约需 2-3 分钟
+   - Glitch 会自动执行 `npm install` 和 `npm start`
+   - `prestart` 脚本会自动构建 shared、client、server 三个包
+   - 首次构建约需 3-5 分钟
 
 3. **获取访问地址**
 
-   - 运行成功后，右侧会显示 **Webview** 预览窗口
-   - 点击预览窗口右上角的 **Open in a new tab** 获得完整访问地址
-   - 地址格式：`https://gomoku.你的用户名.repl.co`
+   - 构建完成后，点击左上角 **Show** → **In a New Window**
+   - 地址格式：`https://你的项目名.glitch.me`
 
 ### 部署架构
 
 ```
-Replit (免费)
+Glitch (免费)
 ├── Node.js 后端 (Express + Socket.io)
 ├── 前端静态文件 (Vite build → server/dist/public)
 └── 统一端口对外服务 (HTTP + WebSocket)
@@ -79,9 +79,10 @@ Replit (免费)
 
 ### 免费额度说明
 
-- 免费计划：500 小时/月运行时长
-- 30 分钟无访问会自动休眠，再次访问自动唤醒
+- 项目 5 分钟无访问会自动休眠
+- 再次访问时自动唤醒（约 10-30 秒）
 - 无需绑定信用卡
+- 支持自定义域名
 
 ## 本地运行
 
