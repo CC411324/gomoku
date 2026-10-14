@@ -1,42 +1,47 @@
 // ==================== 枚举 ====================
 
 /** 棋子颜色 */
-export enum PieceColor {
-  BLACK = 'black',
-  WHITE = 'white',
-  NONE = 'none',
-}
+export const PieceColor = {
+  BLACK: 'black',
+  WHITE: 'white',
+  NONE: 'none',
+} as const;
+export type PieceColor = (typeof PieceColor)[keyof typeof PieceColor];
 
 /** 游戏模式 */
-export enum GameMode {
+export const GameMode = {
   /** 标准模式：任意一方先连成5子获胜 */
-  STANDARD = 'standard',
+  STANDARD: 'standard',
   /** 无尽模式：连成5子可提子+吃子，最终剩余棋子多者胜 */
-  ENDLESS = 'endless',
-}
+  ENDLESS: 'endless',
+} as const;
+export type GameMode = (typeof GameMode)[keyof typeof GameMode];
 
 /** 游戏状态 */
-export enum GameStatus {
-  WAITING = 'waiting',
-  PLAYING = 'playing',
-  FINISHED = 'finished',
-}
+export const GameStatus = {
+  WAITING: 'waiting',
+  PLAYING: 'playing',
+  FINISHED: 'finished',
+} as const;
+export type GameStatus = (typeof GameStatus)[keyof typeof GameStatus];
 
 /** AI 难度 */
-export enum AIDifficulty {
-  EASY = 'easy',
-  MEDIUM = 'medium',
-  HARD = 'hard',
-}
+export const AIDifficulty = {
+  EASY: 'easy',
+  MEDIUM: 'medium',
+  HARD: 'hard',
+} as const;
+export type AIDifficulty = (typeof AIDifficulty)[keyof typeof AIDifficulty];
 
 /** 游戏结束原因 */
-export enum GameEndReason {
-  FIVE_IN_ROW = 'five_in_row',
-  BOARD_FULL = 'board_full',
-  NO_PIECES_LEFT = 'no_pieces_left',
-  OPPONENT_DISCONNECTED = 'opponent_disconnected',
-  SURRENDER = 'surrender',
-}
+export const GameEndReason = {
+  FIVE_IN_ROW: 'five_in_row',
+  BOARD_FULL: 'board_full',
+  NO_PIECES_LEFT: 'no_pieces_left',
+  OPPONENT_DISCONNECTED: 'opponent_disconnected',
+  SURRENDER: 'surrender',
+} as const;
+export type GameEndReason = (typeof GameEndReason)[keyof typeof GameEndReason];
 
 // ==================== 接口 ====================
 
