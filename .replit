@@ -1,0 +1,13 @@
+entrypoint = "packages/server/dist/index.js"
+
+[run]
+cmd = "npm install && npm run build:shared && npm run build:client && npm run build:server && NODE_ENV=production node packages/server/dist/index.js"
+
+[deployment]
+run = ["sh", "-c", "NODE_ENV=production node packages/server/dist/index.js"]
+
+[nix]
+channel = "stable-24_05"
+
+[env]
+NODE_ENV = "production"
