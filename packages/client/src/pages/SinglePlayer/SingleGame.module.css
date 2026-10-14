@@ -1,0 +1,115 @@
+.game {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 16px;
+}
+
+.gameArea {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.infoPanel {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.boardWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.captureHint {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.captureHint p {
+  font-size: 13px;
+  color: #856404;
+  margin: 0 0 8px;
+}
+
+.thinking {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: white;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #667eea;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.thinkingDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #667eea;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.result {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.resultEmoji {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.resultText {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.resultDetail {
+  font-size: 14px;
+  color: #888;
+  margin: 0 0 20px;
+}
+
+.resultActions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .gameArea {
+    flex-direction: column;
+    align-items: center;
+  }
+  .infoPanel {
+    width: 100%;
+    max-width: 500px;
+    order: 2;
+  }
+  .boardWrapper {
+    order: 1;
+  }
+}

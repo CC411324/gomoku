@@ -1,0 +1,124 @@
+.gameInfo {
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.statusSection {
+  text-align: center;
+}
+
+.statusText {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.statusText.finished {
+  color: #e74c3c;
+  font-size: 22px;
+}
+
+.turnIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.stoneIcon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.blackIcon {
+  background: radial-gradient(circle at 35% 35%, #555, #111);
+}
+
+.whiteIcon {
+  background: radial-gradient(circle at 35% 35%, #fff, #ccc);
+  border: 1px solid #999;
+}
+
+.players {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  flex: 1;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.player.active {
+  border-color: #667eea;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.playerStone {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.blackStone {
+  background: radial-gradient(circle at 35% 35%, #555, #111);
+  border: 1px solid #000;
+}
+
+.whiteStone {
+  background: radial-gradient(circle at 35% 35%, #fff, #ccc);
+  border: 1px solid #999;
+}
+
+.playerInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.playerName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.playerLabel {
+  font-size: 11px;
+  color: #999;
+}
+
+.pieceCount {
+  font-size: 12px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.vs {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ccc;
+  padding: 0 4px;
+}
+
+.moveCount {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}

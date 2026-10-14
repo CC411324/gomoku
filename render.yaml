@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: gomoku
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: |
+      npm install
+      npm run build:shared
+      npm run build:client
+      npm run build:server
+    startCommand: NODE_ENV=production node packages/server/dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /api/health

@@ -1,0 +1,23 @@
+{
+  "name": "gomoku",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "npm run dev --workspace=packages/client",
+    "dev:server": "npm run dev --workspace=packages/server",
+    "build": "npm run build:shared && npm run build:client && npm run build:server",
+    "build:shared": "npm run build --workspace=packages/shared",
+    "build:client": "npm run build --workspace=packages/client",
+    "build:server": "npm run build --workspace=packages/server",
+    "start": "NODE_ENV=production node packages/server/dist/index.js",
+    "start:win": "set NODE_ENV=production&& node packages/server/dist/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.3.3"
+  }
+}

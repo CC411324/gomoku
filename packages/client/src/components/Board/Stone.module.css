@@ -1,0 +1,47 @@
+.stone {
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  transition: transform 0.1s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.black {
+  background: radial-gradient(circle at 35% 35%, #555, #111);
+  border: 1px solid #000;
+}
+
+.white {
+  background: radial-gradient(circle at 35% 35%, #fff, #ccc);
+  border: 1px solid #999;
+}
+
+.lastMove {
+  animation: placeStone 0.2s ease-out;
+}
+
+.highlighted {
+  box-shadow: 0 0 8px 3px rgba(255, 215, 0, 0.8);
+}
+
+.lastMoveDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e74c3c;
+}
+
+@keyframes placeStone {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

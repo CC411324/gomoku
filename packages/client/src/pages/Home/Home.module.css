@@ -1,0 +1,89 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  gap: 40px;
+}
+
+.logo {
+  text-align: center;
+}
+
+.boardIcon {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  background: #DEB887;
+  border-radius: 12px;
+  border: 3px solid #8B7355;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.miniBoard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  gap: 1px;
+}
+
+.miniCell {
+  border: 1px solid rgba(139, 115, 85, 0.4);
+}
+
+.miniStone {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blackMini {
+  background: radial-gradient(circle at 35% 35%, #555, #111);
+}
+
+.whiteMini {
+  background: radial-gradient(circle at 35% 35%, #fff, #ccc);
+  border: 1px solid #999;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 8px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
+  letter-spacing: 4px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+}
+
+.footer p {
+  margin: 0;
+}

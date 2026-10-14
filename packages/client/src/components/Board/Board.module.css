@@ -1,0 +1,67 @@
+.boardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.board {
+  position: relative;
+  background: #DEB887;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(139, 115, 85, 0.3);
+  border: 3px solid #8B7355;
+}
+
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.coordinates {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.coordLabel {
+  position: absolute;
+  font-size: 10px;
+  color: #8B7355;
+  font-weight: bold;
+  user-select: none;
+}
+
+.cell {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.cell:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+.capturable {
+  cursor: crosshair;
+}
+
+.capturable:hover {
+  background: rgba(255, 69, 0, 0.25);
+  border-radius: 2px;
+}
+
+.starPointHint {
+  border-radius: 50%;
+  background: #8B7355;
+  opacity: 0.6;
+}
