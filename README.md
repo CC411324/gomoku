@@ -43,40 +43,35 @@ gomoku/
 └── README.md
 ```
 
-## 云端部署（Render）
+## 云端部署（Replit）
 
-项目已配置 [render.yaml](render.yaml)，支持一键部署到 Render 免费平台。
+项目已配置 [.replit](.replit)，支持一键部署到 Replit 免费平台（无需绑定信用卡）。
 
 ### 部署步骤
 
-1. **推送代码到 GitHub**
+1. **访问 Replit 并导入仓库**
 
-```bash
-cd gomoku
-git init
-git add .
-git commit -m "initial commit"
-git branch -M main
-git remote add origin <你的GitHub仓库地址>
-git push -u origin main
-```
+   - 打开 [https://replit.com](https://replit.com) 并注册/登录
+   - 点击 **Create Repl** → **Import from GitHub**
+   - 粘贴仓库地址：`https://github.com/CC411324/gomoku`
+   - 点击 **Import from GitHub**
 
-2. **在 Render 部署**
+2. **首次运行**
 
-   - 访问 [render.com](https://render.com) 并注册/登录
-   - 点击 **New +** → **Blueprint**
-   - 连接你的 GitHub 仓库
-   - Render 会自动读取 `render.yaml` 配置
-   - 点击 **Apply** 开始部署
+   - Replit 会自动读取 `.replit` 配置
+   - 点击 **Run** 按钮，自动执行：安装依赖 → 构建 → 启动服务
+   - 首次构建约需 2-3 分钟
 
-3. **等待构建完成**（约 2-3 分钟）
+3. **获取访问地址**
 
-   部署成功后会获得一个 `https://gomoku-xxxx.onrender.com` 的访问地址。
+   - 运行成功后，右侧会显示 **Webview** 预览窗口
+   - 点击预览窗口右上角的 **Open in a new tab** 获得完整访问地址
+   - 地址格式：`https://gomoku.你的用户名.repl.co`
 
 ### 部署架构
 
 ```
-Render Web Service (免费)
+Replit (免费)
 ├── Node.js 后端 (Express + Socket.io)
 ├── 前端静态文件 (Vite build → server/dist/public)
 └── 统一端口对外服务 (HTTP + WebSocket)
@@ -84,9 +79,9 @@ Render Web Service (免费)
 
 ### 免费额度说明
 
-- Render 免费服务 15 分钟无访问会自动休眠
-- 首次访问需等待约 30 秒唤醒
-- 每月 750 小时免费时长，足够个人使用
+- 免费计划：500 小时/月运行时长
+- 30 分钟无访问会自动休眠，再次访问自动唤醒
+- 无需绑定信用卡
 
 ## 本地运行
 
